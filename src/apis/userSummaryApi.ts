@@ -7,6 +7,9 @@ export const postSummary = async (
 ) => {
   const response = await fetch(`${HTTP_URL}/summary/user`, {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify({
       // 요청 본문을 문자열로 변환
       userId: userId,

@@ -16,12 +16,14 @@ const Write = () => {
   const [data, setData] = useState<Data>();
   const [content, setContent] = useState('');
   const { state } = useLocation();
+  const navigate = useNavigate();
 
   const handleSumary = () => {
     try {
       postSummary(1, state.id, content).then((res) => {
         console.log('gg', res);
         setData(res);
+        navigate('/aisummary', { state: res.result.summary });
       });
     } catch (error) {
       console.error('Error fetching writings:', error);
@@ -84,7 +86,7 @@ const Write = () => {
                   width={119}
                   height={45}
                   content={'저장하기'}
-                  onClick={() => navigate('/aisummary', { state: content })}
+                  onClick={handleSumary}
                 />
               </div>
             </div>

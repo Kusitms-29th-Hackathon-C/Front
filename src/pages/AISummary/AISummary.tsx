@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 
 const AISummary = () => {
   const { state } = useLocation();
+  console.log('ddd', state);
   return (
     <>
       <Header />
