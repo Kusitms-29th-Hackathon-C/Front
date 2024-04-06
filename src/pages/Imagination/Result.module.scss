@@ -1,0 +1,56 @@
+@import '../../styles/style.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 56px 310px 150px 310px;
+  gap: 36px;
+}
+
+.tagList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.writeBox {
+  display: flex;
+  width: 1297px;
+  height: 428px;
+  padding: 48px 64px 64px 64px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid var(--Gray-50, #a0a0a0);
+  background: var(--Gray-0, #f8f8f8);
+}
+
+.title {
+  @include Large2;
+  color: $gray-100;
+}
+
+.myTitle {
+  @include Header1-Bold;
+}
+
+.myContent {
+  @include Body1-Reg;
+}
+
+.middle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
