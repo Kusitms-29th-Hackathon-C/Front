@@ -7,6 +7,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 18px 24px;
+  border-radius: 16px;
+  border: 1px solid $gray-30;
+  background: $white;
 }
 
 .rightWrapper {
@@ -19,6 +22,7 @@
 .topInfo {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 12px;
   color: $gray-70;
 }
@@ -29,6 +33,7 @@
 
 .content {
   @include Body1-Reg;
+  color: $gray-100;
 }
 
 .tagList {

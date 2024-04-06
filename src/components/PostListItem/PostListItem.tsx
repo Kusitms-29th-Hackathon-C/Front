@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './PostListItem.module.scss';
 import Label from '../common/label/Label';
 import Button from '../common/button/Button';
+import { ProfileLine } from '../../assets/images';
 
 interface PostListItemProps {
   type: 'summary' | 'imagination';
@@ -19,9 +20,9 @@ const PostListItem = (props: PostListItemProps) => {
     <div className={styles.container}>
       <div className={styles.rightWrapper}>
         <div className={styles.topInfo}>
+          <Label type={'10'} paddingH={4} paddingV={4} content={label || ''} />
           {type === 'summary' ? (
             <>
-              <Label type={'10'} width={47} height={25} content={label || ''} />
               <div className={styles.textInfo}>{count}자</div>
               <div className={styles.textInfo}>Lv.{level}</div>
             </>

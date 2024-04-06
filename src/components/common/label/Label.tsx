@@ -3,18 +3,17 @@ import styles from './Label.module.scss';
 
 interface LabelProps {
   type: string;
-  width: number;
-  height: number;
   content: string;
+  paddingH: number;
+  paddingV: number;
 }
 
-const Label = ({ type, width, height, content }: LabelProps) => {
+const Label = ({ type, content, paddingH, paddingV }: LabelProps) => {
   // width는 311, 103, 71
   // height는 45, 45, 37
 
   const dynamicPaddingStyle = {
-    width: `${width}px`,
-    height: `${height}px`,
+    padding: `${paddingH}px ${paddingV}px`,
   };
 
   return (

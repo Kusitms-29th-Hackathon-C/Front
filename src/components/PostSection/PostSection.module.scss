@@ -1,0 +1,23 @@
+@import '../../styles/style.scss';
+
+.tabBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.tabItem {
+  @include Header1-Bold;
+  color: $gray-50;
+  &:active {
+    color: $gray-100;
+  }
+}
+
+.postsBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
