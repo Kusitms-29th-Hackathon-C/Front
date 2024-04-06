@@ -10,8 +10,8 @@ const Navbar = () => {
         <Logo />
         <div className={styles.menuContainer}>
           <div className={styles.menuItems}>홈</div>
-          <div className={styles.menuItems}>글 요약</div>
-          <div className={styles.menuItems}>상상력</div>
+          <div className={styles.menuItems}>요약 훈련</div>
+          <div className={styles.menuItems}>상상 훈련</div>
         </div>
       </div>
       <div className={styles.profileWrapper}>
