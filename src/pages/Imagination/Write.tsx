@@ -1,14 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Write.module.scss';
 import Button from '../../components/common/button/Button';
 import { Header } from '../../assets/images';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { postSummary } from '../../apis/userSummaryApi';
+
+interface Data {
+  summary: string;
+  others: { nickname: string; content: string }[];
+}
 
 const Write = () => {
   const navigate = useNavigate();
 
-  const [content, setContent] = React.useState('');
+  const [data, setData] = useState<Data>();
+  const [content, setContent] = useState('');
+  const { state } = useLocation();
 
+  const handleSumary = () => {
+    try {
+      postSummary(1, state.id, content).then((res) => {
+        console.log('gg', res);
+        setData(res);
+      });
+    } catch (error) {
+      console.error('Error fetching writings:', error);
+    }
+  };
+
+  console.log(data);
   return (
     <>
       <div className={styles.top}>
@@ -67,11 +87,7 @@ const Write = () => {
                 />
               </div>
             </div>
-            <textarea
-              value={content}
-              className={styles.text}
-              onChange={(e) => setContent(e.target.value)}
-            ></textarea>
+            <textarea className={styles.text}></textarea>
           </div>
         </div>
       </div>

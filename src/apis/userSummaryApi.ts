@@ -1,7 +1,7 @@
 import { HTTP_URL, USER_ID } from './index';
 
 export const postSummary = async (
-  userId: number,
+  userId: number = USER_ID,
   writingId: number,
   summary: string
 ) => {
@@ -20,5 +20,5 @@ export const postSummary = async (
   }
 
   const data = await response.json();
-  return data.data;
+  return data;
 };

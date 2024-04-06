@@ -23,7 +23,7 @@ interface Data {
 }
 
 const Exercise = () => {
-  const [data, setData] = useState<Data[]>();
+  const [data, setData] = useState<Data[]>([]);
 
   const checkedList = [check1, check2, check3];
   const navigate = useNavigate();
@@ -31,7 +31,9 @@ const Exercise = () => {
   useEffect(() => {
     const fetchWritings = async () => {
       try {
-        getWritingList().then((res) => setData(res));
+        getWritingList().then((res) => {
+          setData(res);
+        });
       } catch (error) {
         console.error('Error fetching writings:', error);
       }
@@ -41,14 +43,21 @@ const Exercise = () => {
     }
   }, []);
 
+  console.log(data);
+
   return (
     <>
       <div className={styles.container}>
         <div className={styles.title}>오늘의 요약 훈련</div>
         <img src={topic1} />
         <div className={styles.exerciseList}>
-          {data[0]?.infoList.map((item, index) => (
-            <div className={styles.exercise}>
+          {data[0]?.infoList?.map((item, index) => (
+            <div
+              className={styles.exercise}
+              onClick={() =>
+                navigate('/write', { state: { id: item.writingId } })
+              }
+            >
               {item.complete ? (
                 <img src={checkedIcon} />
               ) : (
@@ -60,8 +69,13 @@ const Exercise = () => {
         </div>
         <img src={topic2} />
         <div className={styles.exerciseList}>
-          {data[1]?.infoList.map((item, index) => (
-            <div className={styles.exercise}>
+          {data[1]?.infoList?.map((item, index) => (
+            <div
+              className={styles.exercise}
+              onClick={() =>
+                navigate('/write', { state: { id: item.writingId } })
+              }
+            >
               {item.complete ? (
                 <img src={checkedIcon} />
               ) : (
@@ -73,8 +87,13 @@ const Exercise = () => {
         </div>
         <img src={topic3} />
         <div className={styles.exerciseList}>
-          {data[2]?.infoList.map((item, index) => (
-            <div className={styles.exercise} onClick={() => navigate('/write')}>
+          {data[2]?.infoList?.map((item, index) => (
+            <div
+              className={styles.exercise}
+              onClick={() =>
+                navigate('/write', { state: { id: item.writingId } })
+              }
+            >
               {item.complete ? (
                 <img src={checkedIcon} />
               ) : (

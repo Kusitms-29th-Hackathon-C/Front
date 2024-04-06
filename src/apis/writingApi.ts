@@ -8,5 +8,5 @@ export const getWritingList = async () => {
   }
 
   const data = await response.json();
-  return data.data;
+  return data;
 };
