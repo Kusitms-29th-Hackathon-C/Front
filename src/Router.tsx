@@ -16,9 +16,8 @@ const Router = () => {
           <Route path='/' element={<Home />} />
           <Route path='/imagination' element={<Imagination />} />
           <Route path='/exercise' element={<Exercise />} />
-          <Route path='/imagination/write' element={<Write />} />
+          <Route path='/write' element={<Write />} />
         </Routes>
-        <Footer />
       </ScrollToTop>
     </BrowserRouter>
   );
