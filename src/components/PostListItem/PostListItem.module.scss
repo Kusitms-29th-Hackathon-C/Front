@@ -1,0 +1,43 @@
+@import '../../styles/style.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+
+.rightWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 11px;
+}
+
+.topInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  color: $gray-70;
+}
+
+.textInfo {
+  @include Body2-Reg;
+}
+
+.content {
+  @include Body1-Reg;
+}
+
+.tagList {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.tag {
+  @include Body2-Reg;
+  color: $gray-70;
+}
