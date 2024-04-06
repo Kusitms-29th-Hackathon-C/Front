@@ -12,21 +12,36 @@ interface AttendanceProps {
 
 const Attendance = ({ week, day }: AttendanceProps) => {
   return (
-    <Section title={'출석'}>
-      <div className={styles.topInfoBox}>
-        <div className={styles.topInfoItem}>
-          <Label type='100' content='주간연속출석' paddingH={4} paddingV={16} />
-          <PointLine />
-          <div>{week}주</div>
-        </div>
-        <div className={styles.topInfoItem}>
-          <Label type='100' content='일간연속출석' paddingH={4} paddingV={16} />
-          <PointLine />
-          <div>{day}일</div>
+    <>
+      <div className={styles.container}>
+        <div className={styles.label}>출석</div>
+        <div className={styles.subContainer}>
+          <div className={styles.topInfoBox}>
+            <div className={styles.topInfoItem}>
+              <Label
+                type='100'
+                content='주간연속출석'
+                paddingH={4}
+                paddingV={16}
+              />
+              <PointLine />
+              <div>{week}주</div>
+            </div>
+            <div className={styles.topInfoItem}>
+              <Label
+                type='100'
+                content='일간연속출석'
+                paddingH={4}
+                paddingV={16}
+              />
+              <PointLine />
+              <div>{day}일</div>
+            </div>
+          </div>
+          <img src={dayChart} width={'552px'} />
         </div>
       </div>
-      <img src={dayChart} width={'552px'} />
-    </Section>
+    </>
   );
 };
 
