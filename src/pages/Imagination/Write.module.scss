@@ -2,6 +2,7 @@
 
 .container {
   display: flex;
+  flex-direction: column;
   padding: 56px 310px 150px 310px;
 
   .subContainer {
