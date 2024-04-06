@@ -7,3 +7,4 @@ export { ReactComponent as SummaryOthers } from './summary_others.svg';
 export { ReactComponent as WriteCharacter } from './write-imagination.svg';
 export { ReactComponent as Like } from './Like.svg';
 export { ReactComponent as Stroke } from './Stroke.svg';
+export { ReactComponent as TodayRank } from './todayrank.svg';

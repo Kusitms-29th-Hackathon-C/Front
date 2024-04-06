@@ -6,10 +6,12 @@ import post2 from '../../assets/images/Imagination3.png';
 import rankingSection from '../../assets/images/Imagination4.png';
 import Label from '../../components/common/label/Label';
 import Footer from '../../components/common/footer/Footer';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { TodayRank } from '../../assets/images';
 
 const Imagination = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const tags = ['동전', '비누', '감기약'];
   return (
@@ -36,7 +38,11 @@ const Imagination = () => {
               <Label type='10' content={item} paddingH={4} paddingV={16} />
             ))}
           </div>
-          <img src={rankingSection} />
+          {location.state === true ? (
+            <TodayRank />
+          ) : (
+            <img src={rankingSection} />
+          )}
         </div>
       </div>
       <Footer />

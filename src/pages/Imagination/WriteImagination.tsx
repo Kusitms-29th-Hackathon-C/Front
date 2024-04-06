@@ -21,7 +21,7 @@ const WriteImagination = () => {
           width={119}
           height={45}
           content={'저장하기'}
-          onClick={() => navigate('/result')}
+          onClick={() => navigate('/imagination', { state: true })}
         />
       </div>
 
