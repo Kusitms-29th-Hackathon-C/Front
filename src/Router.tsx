@@ -7,7 +7,7 @@ const Router = () => {
     <BrowserRouter>
       <ScrollToTop>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path='/' element={<Home />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
