@@ -6,15 +6,21 @@ import post2 from '../../assets/images/Imagination3.png';
 import rankingSection from '../../assets/images/Imagination4.png';
 import Label from '../../components/common/label/Label';
 import Footer from '../../components/common/footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Imagination = () => {
+  const navigate = useNavigate();
+
   const tags = ['동전', '비누', '감기약'];
   return (
     <>
       <div className={styles.container}>
         <div className={styles.section}>
           <div className={styles.sectionTitle}>상상력 글쓰기</div>
-          <img src={topSection} />
+          <img
+            src={topSection}
+            onClick={() => navigate('/imagination/write')}
+          />
           {/* <div className={styles.PostList}>
       <div className={styles.postItem}>
         <div className={styles.itemTitle}></div>
