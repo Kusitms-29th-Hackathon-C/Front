@@ -1,0 +1,26 @@
+@import '../../styles/style.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding-bottom: 300px;
+}
+
+.title {
+  @include Large2;
+  color: $gray-100;
+}
+
+.exerciseList {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.exercise {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+}
