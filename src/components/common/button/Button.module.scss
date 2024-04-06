@@ -1,0 +1,27 @@
+@import '../../../styles/style.scss';
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 48px;
+
+  @include Body1-Med;
+}
+
+.btnGreen100 {
+  background-color: $green-100;
+  color: $white;
+}
+
+.btnGreen10 {
+  background-color: $green-10;
+  color: $green-100;
+}
+
+.btnWhite {
+  background-color: $white;
+  color: $green-100;
+  border: 1px solid $green-100;
+}

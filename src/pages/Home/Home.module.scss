@@ -1,5 +1,16 @@
 @import '../../styles/style.scss';
 
 .container {
-  color: $main-1;
+  padding: 56px 310px 450px 310px;
+  @include Large;
+  color: $gray-10;
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+
+  .subContainer {
+    display: flex;
+    flex-direction: horizontal;
+    gap: 24px;
+  }
 }

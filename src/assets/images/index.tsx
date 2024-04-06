@@ -1,0 +1,9 @@
+export { ReactComponent as Logo } from './Logo.svg';
+export { ReactComponent as Avatar } from './Avatar.svg';
+export { ReactComponent as ProfileLine } from './ProfileLine.svg';
+export { ReactComponent as PointLine } from './PointLine.svg';
+export { ReactComponent as Header } from './Group-45.svg';
+export { ReactComponent as SummaryOthers } from './summary_others.svg';
+export { ReactComponent as WriteCharacter } from './write-imagination.svg';
+export { ReactComponent as Like } from './Like.svg';
+export { ReactComponent as Stroke } from './Stroke.svg';

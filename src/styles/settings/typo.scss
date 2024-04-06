@@ -1,89 +1,78 @@
-// @mixin H1 {
-//     font: {
-//       family: 'Pretendard';
-//       size: 32px;
-//       weight: 700;
-//     }
-//     line-height: normal;
-//     letter-spacing: -0.114px;
-//   }
+@mixin Large {
+  font: {
+    family: 'Pretendard-Bold';
+    size: 38px;
+  }
+}
 
-//   @mixin H2 {
-//     font: {
-//       family: 'Pretendard';
-//       size: 28px;
-//       weight: 700;
-//     }
-//     line-height: normal;
-//     letter-spacing: -0.114px;
-//   }
+@mixin Large2 {
+  font: {
+    family: 'Pretendard-Bold';
+    size: 32px;
+  }
+}
 
-//   @mixin H3 {
-//     font: {
-//       family: 'Pretendard';
-//       size: 24px;
-//       weight: 700;
-//     }
-//     line-height: normal;
-//     letter-spacing: -0.114px;
-//   }
+@mixin Header1-Bold {
+  font: {
+    family: 'Pretendard-Bold';
+    size: 24px;
+  }
+}
 
-//   @mixin H4 {
-//     font: {
-//       family: 'Pretendard';
-//       size: 20px;
-//       weight: 700;
-//     }
-//     line-height: normal;
-//     letter-spacing: -0.114px;
-//   }
+@mixin Header1-Med {
+  font: {
+    family: 'Pretendard-Medium';
+    size: 24px;
+  }
+}
 
-//   @mixin H5 {
-//     font: {
-//       family: 'Pretendard';
-//       size: 20px;
-//       weight: 600;
-//     }
-//     line-height: normal;
-//     letter-spacing: -0.114px;
-//   }
+@mixin Header2-Bold {
+  font: {
+    family: 'Pretendard-Bold';
+    size: 20px;
+  }
+}
 
-//   @mixin Body1 {
-//     font: {
-//       family: 'Pretendard';
-//       size: 18px;
-//       weight: 700;
-//     }
-//     line-height: normal;
-//     letter-spacing: -0.114px;
-//   }
+@mixin Header2-Med {
+  font: {
+    family: 'Pretendard-Medium';
+    size: 20px;
+  }
+}
 
-//   @mixin Body2 {
-//     font: {
-//       family: 'Pretendard';
-//       size: 18px;
-//       weight: 600;
-//     }
-//     line-height: normal;
-//     letter-spacing: -0.114px;
-//   }
+@mixin Body1-Med {
+  font: {
+    family: 'Pretendard-Medium';
+    size: 16px;
+  }
+  line-height: 180%;
+}
 
-//   @mixin Body3 {
-//     font: {
-//       family: 'Pretendard';
-//       size: 18px;
-//       weight: 400;
-//     }
-//     line-height: normal;
-//     letter-spacing: -0.114px;
-//   }
+@mixin Body1-Reg {
+  font: {
+    family: 'Pretendard-Regular';
+    size: 16px;
+  }
+  line-height: 180%;
+}
 
-//   @mixin Body4 {
-//     font: {
-//       family: 'Pretendard';
-//       size: 16px;
-//       weight: 400;
-//     }
-//     line-height: normal;
-//     letter-spacing: -0.114px;
-//   }
+@mixin Body2-Med {
+  font: {
+    family: 'Pretendard-Medium';
+    size: 14px;
+  }
+}
+
+@mixin Body2-Reg {
+  font: {
+    family: 'Pretendard-Regular';
+    size: 14px;
+  }
+}
+
+@mixin Small {
+  font: {
+    family: 'Pretendard-Regular';
+    size: 12px;
+  }
+}

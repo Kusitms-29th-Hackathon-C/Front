@@ -1,0 +1,62 @@
+@import '../../styles/style.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  width: min-content;
+  white-space: nowrap;
+
+  .label {
+    color: $gray-100;
+    @include Large2;
+  }
+
+  .box {
+    height: 375px;
+    padding: 0px 48px;
+    border-radius: 14px;
+    border: 1px solid $gray-30;
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    .item {
+      display: flex;
+      gap: 57px;
+      align-items: center;
+      color: $gray-100;
+      @include Header1-Bold;
+
+      .level {
+        display: flex;
+        gap: 28px;
+
+        .default {
+          display: flex;
+          width: 73px;
+          height: 71px;
+          border-radius: 50px;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          @include Body1-Med;
+        }
+
+        .complete {
+          background-color: $green-100;
+          color: $white;
+        }
+
+        .yet {
+          background-color: $white;
+          color: $green-100;
+          border: 1px solid $green-100;
+        }
+      }
+    }
+  }
+}
