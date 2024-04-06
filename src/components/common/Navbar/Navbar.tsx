@@ -15,7 +15,12 @@ const Navbar = () => {
           <div className={styles.menuItems} onClick={() => navigate('/')}>
             홈
           </div>
-          <div className={styles.menuItems}>요약 훈련</div>
+          <div
+            className={styles.menuItems}
+            onClick={() => navigate('/exercise')}
+          >
+            요약 훈련
+          </div>
           <div
             className={styles.menuItems}
             onClick={() => navigate('/imagination')}
