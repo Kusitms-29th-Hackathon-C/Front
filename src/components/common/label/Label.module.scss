@@ -1,0 +1,27 @@
+@import '../../../styles/style.scss';
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 48px;
+
+  @include Body1-Med;
+}
+
+.labelGreen100 {
+  background-color: $green-100;
+  color: $white;
+}
+
+.labelGreen10 {
+  background-color: $green-10;
+  color: $green-100;
+}
+
+.labelWhite {
+  background-color: $white;
+  color: $green-100;
+  border: 1px solid $green-100;
+}
