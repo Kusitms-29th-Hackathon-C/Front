@@ -19,7 +19,7 @@ const Imagination = () => {
           <div className={styles.sectionTitle}>상상력 글쓰기</div>
           <img
             src={topSection}
-            /*onClick={() => navigate('/imagination/write')}*/
+            onClick={() => navigate('/imagination/write')}
           />
           {/* <div className={styles.PostList}>
       <div className={styles.postItem}>
