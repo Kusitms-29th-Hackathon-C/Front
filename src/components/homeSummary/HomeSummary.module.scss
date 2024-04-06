@@ -13,9 +13,12 @@
   }
 
   .box {
-    padding: 32px 48px;
+    height: 375px;
+    padding: 0px 48px;
     border-radius: 14px;
     border: 1px solid $gray-30;
+    align-items: center;
+    justify-content: center;
 
     display: flex;
     flex-direction: column;
