@@ -6,9 +6,10 @@ interface ButtonProps {
   width: number;
   height: number;
   content: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button = ({ type, width, height, content }: ButtonProps) => {
+const Button = ({ type, width, height, content, onClick }: ButtonProps) => {
   // width는 319, 111, 79
   // height는 45, 45, 37
   const dynamicPaddingStyle = {
@@ -18,6 +19,7 @@ const Button = ({ type, width, height, content }: ButtonProps) => {
 
   return (
     <button
+      onClick={onClick}
       style={dynamicPaddingStyle}
       className={`${styles.btn}
       ${type === '100' ? styles.btnGreen100 : type === '10' ? styles.btnGreen10 : styles.btnWhite}`}
