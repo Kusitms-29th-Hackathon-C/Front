@@ -16,7 +16,6 @@ const Write = () => {
   const [data, setData] = useState<Data>();
   const [content, setContent] = useState('');
   const { state } = useLocation();
-  const navigate = useNavigate();
 
   const handleSumary = () => {
     try {
@@ -90,7 +89,11 @@ const Write = () => {
                 />
               </div>
             </div>
-            <textarea className={styles.text}></textarea>
+            <textarea
+              value={content}
+              className={styles.text}
+              onChange={(e) => setContent(e.target.value)}
+            ></textarea>
           </div>
         </div>
       </div>
