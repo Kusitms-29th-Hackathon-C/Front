@@ -13,13 +13,15 @@
   //   align-items: center;
 
   .leftContainer {
-    display: flex;
     flex-direction: column;
-    gap: 112px;
     white-space: pre;
 
     color: $gray-70;
     @include Body2-Reg;
+
+    :first-child {
+      margin-bottom: 80px;
+    }
   }
 
   .rightContainer {
