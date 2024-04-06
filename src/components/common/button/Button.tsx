@@ -5,10 +5,12 @@ interface ButtonProps {
   type: string;
   width: number;
   height: number;
+  content: string;
 }
 
-const Button = ({ type, width, height }: ButtonProps) => {
-  // size는 319, 111, 79
+const Button = ({ type, width, height, content }: ButtonProps) => {
+  // width는 319, 111, 79
+  // height는 45, 45, 37
   const dynamicPaddingStyle = {
     width: `${width}px`,
     height: `${height}px`,
@@ -20,7 +22,7 @@ const Button = ({ type, width, height }: ButtonProps) => {
       className={`${styles.btn}
       ${type === '100' ? styles.btnGreen100 : type === '10' ? styles.btnGreen10 : styles.btnWhite}`}
     >
-      Button
+      {content}
     </button>
   );
 };
