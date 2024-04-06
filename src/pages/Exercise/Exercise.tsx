@@ -73,27 +73,31 @@ const Exercise = () => {
         ))}
       </div>
       <img src={topic2} />
-      {exerciseList[1]?.map((item, index) => (
-        <div className={styles.exercise}>
-          {item.checked ? (
-            <img src={checkedIcon} />
-          ) : (
-            <img src={checkedList[index]} />
-          )}
-          <div>{item.title}</div>
-        </div>
-      ))}
+      <div className={styles.exerciseList}>
+        {exerciseList[1]?.map((item, index) => (
+          <div className={styles.exercise}>
+            {item.checked ? (
+              <img src={checkedIcon} />
+            ) : (
+              <img src={checkedList[index]} />
+            )}
+            <div>{item.title}</div>
+          </div>
+        ))}
+      </div>
       <img src={topic3} />
-      {exerciseList[2]?.map((item, index) => (
-        <div className={styles.exercise}>
-          {item.checked ? (
-            <img src={checkedIcon} />
-          ) : (
-            <img src={checkedList[index]} />
-          )}
-          <div>{item.title}</div>
-        </div>
-      ))}
+      <div className={styles.exerciseList}>
+        {exerciseList[2]?.map((item, index) => (
+          <div className={styles.exercise}>
+            {item.checked ? (
+              <img src={checkedIcon} />
+            ) : (
+              <img src={checkedList[index]} />
+            )}
+            <div>{item.title}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
