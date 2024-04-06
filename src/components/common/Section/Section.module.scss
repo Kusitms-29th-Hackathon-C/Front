@@ -1,0 +1,24 @@
+@import '../../../styles/style.scss';
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  @include Large2;
+  color: $gray-100;
+}
+
+.contentBox {
+  display: flex;
+  padding: 32px;
+  border-radius: 14px;
+  border: 1px solid $gray-30;
+  background: $white;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
