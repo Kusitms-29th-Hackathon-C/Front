@@ -1,10 +1,10 @@
 @import '../../../styles/style.scss';
 
 .section {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  white-space: nowrap;
 }
 
 .title {
@@ -14,11 +14,12 @@
 
 .contentBox {
   display: flex;
+  width: 681px;
   padding: 32px;
   border-radius: 14px;
-  border: 1px solid $gray-30;
-  background: $white;
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+  border: 1px solid var(--Green-50, #91eea0);
+  background: var(--Green-10, #edfff0);
 }

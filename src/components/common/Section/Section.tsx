@@ -10,7 +10,7 @@ const Section = (props: SectionProps) => {
   return (
     <div className={styles.section}>
       <div className={styles.title}>{title}</div>
-      <div className={styles.contentBox}>{children}</div>;
+      <div className={styles.contentBox}>{children}</div>
     </div>
   );
 };
