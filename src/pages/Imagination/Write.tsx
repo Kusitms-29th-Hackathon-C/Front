@@ -2,8 +2,13 @@ import React from 'react';
 import styles from './Write.module.scss';
 import Button from '../../components/common/button/Button';
 import { Header } from '../../assets/images';
+import { useNavigate } from 'react-router-dom';
 
 const Write = () => {
+  const navigate = useNavigate();
+
+  const [content, setContent] = React.useState('');
+
   return (
     <>
       <div className={styles.top}>
@@ -58,10 +63,15 @@ const Write = () => {
                   width={119}
                   height={45}
                   content={'저장하기'}
+                  onClick={() => navigate('/aisummary', { state: content })}
                 />
               </div>
             </div>
-            <textarea className={styles.text}></textarea>
+            <textarea
+              value={content}
+              className={styles.text}
+              onChange={(e) => setContent(e.target.value)}
+            ></textarea>
           </div>
         </div>
       </div>

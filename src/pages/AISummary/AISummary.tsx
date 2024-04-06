@@ -3,8 +3,10 @@ import styles from './AISummary.module.scss';
 import Footer from '../../components/common/footer/Footer';
 import { Header, SummaryOthers } from '../../assets/images';
 import Button from '../../components/common/button/Button';
+import { useLocation } from 'react-router-dom';
 
 const AISummary = () => {
+  const { state } = useLocation();
   return (
     <>
       <Header />
@@ -14,13 +16,7 @@ const AISummary = () => {
           <Button type='0' width={119} height={45} content={'수정하기'} />
         </div>
 
-        <div className={styles.mySummary}>
-          '블록체인 기술은 탈중앙화된 거래 기록 시스템으로 암호화폐를 포함한
-          디지털 거래를 혁신적으로 관리합니다. 이를 통해 중개자 없는 거래,
-          투명성, 보안, 및 비용 절감이 가능해졌습니다. 그러나 확장성과 규제 등의
-          도전에도 불구하고, 블록체인과 암호화폐는 금융과 기술 분야에서 계속해서
-          혁신을 이끌어내고 있습니다.'
-        </div>
+        <div className={styles.mySummary}>{state}</div>
         <div className={styles.title}>AI Summary</div>
         <div className={styles.aiSummary}>
           블록체인 기술은 중앙화된 중개자 없이 거래를 기록하고 관리하는 혁신적인
