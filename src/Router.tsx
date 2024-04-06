@@ -17,10 +17,10 @@ const Router = () => {
           <Route path='/' element={<Home />} />
           <Route path='/imagination' element={<Imagination />} />
           <Route path='/exercise' element={<Exercise />} />
+          <Route path='/write' element={<Write />} />
           <Route path='/imagination/write' element={<Write />} />
           <Route path='/aisummary' element={<AISummary />} />
         </Routes>
-        <Footer />
       </ScrollToTop>
     </BrowserRouter>
   );
