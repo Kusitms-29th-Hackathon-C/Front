@@ -1,5 +1,6 @@
 @import '../../styles/style.scss';
 
 .container {
-  color: $main-1;
+  @include Large;
+  color: $gray-4;
 }
