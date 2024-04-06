@@ -1,0 +1,58 @@
+@import '../../../styles/style.scss';
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  padding-left: 310px;
+  padding-right: 310px;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid $gray-05;
+  align-items: center;
+}
+
+.rightWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 66px;
+}
+
+.logo {
+  width: 153px;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.menuItems {
+  @include Header2-Med;
+  flex-shrink: 0;
+  color: $gray-70;
+  &:hover {
+    color: $green-100;
+  }
+  &:active {
+    color: $green-100;
+  }
+}
+
+.profileWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 23px;
+}
+.nameWrapper {
+  @include Body1-Med;
+  color: $gray-50;
+  gap: 6px;
+  .name {
+    color: $gray-100;
+  }
+}
