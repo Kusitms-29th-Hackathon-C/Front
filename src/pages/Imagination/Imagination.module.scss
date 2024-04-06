@@ -1,0 +1,40 @@
+@import '../../styles/style.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sectionTitle {
+  @include Large2;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.postItem {
+  display: flex;
+  padding: 32px;
+}
+
+.tagList {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.itemTitle {
+  @include Header1-Bold;
+  color: $gray-100;
+}
