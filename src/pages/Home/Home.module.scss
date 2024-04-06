@@ -3,4 +3,5 @@
 .container {
   @include Large;
   color: $gray-10;
+  padding-bottom: 300px;
 }
