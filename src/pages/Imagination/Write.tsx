@@ -29,6 +29,7 @@ const Write = () => {
   };
 
   console.log(data);
+
   return (
     <>
       <div className={styles.top}>
