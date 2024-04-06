@@ -1,14 +1,13 @@
 import React from 'react';
 import styles from './Navbar.module.scss';
-import logo from '../../../assets/images/Logo.svg';
-import line from '../../../assets/images/ProfileLine.svg';
-import avatar from '../../../assets/images/Avatar.svg';
+
+import { Avatar, Logo, ProfileLine } from '../../../assets/images';
 
 const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.rightWrapper}>
-        <img src={logo} className={styles.logo} />
+        <Logo />
         <div className={styles.menuContainer}>
           <div className={styles.menuItems}>홈</div>
           <div className={styles.menuItems}>글 요약</div>
@@ -19,8 +18,8 @@ const Navbar = () => {
         <div className={styles.nameWrapper}>
           <span className={styles.name}>밍그리</span>님
         </div>
-        <img src={line} />
-        <img src={avatar} />
+        <ProfileLine />
+        <Avatar />
       </div>
     </div>
   );
