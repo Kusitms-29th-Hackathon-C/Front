@@ -5,6 +5,7 @@ import Navbar from './components/common/Navbar/Navbar';
 import Footer from './components/common/footer/Footer';
 import Imagination from './pages/Imagination/Imagination';
 import Exercise from './pages/Exercise/Exercise';
+import Write from './pages/Imagination/Write';
 
 const Router = () => {
   return (
@@ -15,6 +16,7 @@ const Router = () => {
           <Route path='/' element={<Home />} />
           <Route path='/imagination' element={<Imagination />} />
           <Route path='/exercise' element={<Exercise />} />
+          <Route path='/imagination/write' element={<Write />} />
         </Routes>
         <Footer />
       </ScrollToTop>
