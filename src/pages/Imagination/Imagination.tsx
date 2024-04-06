@@ -39,7 +39,9 @@ const Imagination = () => {
             ))}
           </div>
           {location.state === true ? (
-            <TodayRank />
+            <div onClick={() => navigate('/imagination/result')}>
+              <TodayRank />
+            </div>
           ) : (
             <img src={rankingSection} />
           )}
