@@ -4,7 +4,6 @@ import Home from './pages/Home/Home';
 import Navbar from './components/common/Navbar/Navbar';
 import Footer from './components/common/footer/Footer';
 import Imagination from './pages/Imagination/Imagination';
-import Footer from './components/footer/Footer';
 import Exercise from './pages/Exercise/Exercise';
 
 const Router = () => {
@@ -17,6 +16,7 @@ const Router = () => {
           <Route path='/imagination' element={<Imagination />} />
           <Route path='/exercise' element={<Exercise />} />
         </Routes>
+        <Footer />
       </ScrollToTop>
     </BrowserRouter>
   );

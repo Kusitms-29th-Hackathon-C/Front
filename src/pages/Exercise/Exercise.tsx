@@ -38,6 +38,20 @@ const Exercise = () => {
         title: '코나투스',
       },
     ],
+    [
+      {
+        checked: true,
+        title: '코나투스',
+      },
+      {
+        checked: true,
+        title: '코나투스',
+      },
+      {
+        checked: false,
+        title: '코나투스',
+      },
+    ],
   ];
 
   const checkedList = [check1, check2, check3];
