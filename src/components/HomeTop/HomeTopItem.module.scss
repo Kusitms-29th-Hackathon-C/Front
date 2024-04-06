@@ -1,0 +1,64 @@
+@import '../../styles/style.scss';
+
+.container {
+  display: flex;
+  gap: 24px;
+
+  .rank {
+    color: var(--Green-100, #58df6d);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.4px;
+  }
+
+  .subContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .profile {
+      display: flex;
+      gap: 8px;
+      color: var(--Gray-70, #7b7b7b);
+      align-items: center;
+      justify-content: center;
+
+      /* Body 2 (Regular) */
+      font-family: Pretendard;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.28px;
+
+      .img {
+        width: 23px;
+        height: 23px;
+        fill: #d9d9d9;
+      }
+    }
+
+    .content {
+      color: var(--Gray-100, #373d49);
+
+      /* Body 1 (Regular) */
+      font-family: Pretendard;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 180%; /* 28.8px */
+      letter-spacing: -0.32px;
+    }
+  }
+}
+
+.divider {
+  width: 576px;
+  height: 1px;
+  stroke-width: 0.5px;
+  stroke: var(--Gray-50, #a0a0a0);
+}
