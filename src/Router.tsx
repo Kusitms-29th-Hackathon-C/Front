@@ -7,6 +7,7 @@ import Exercise from './pages/Exercise/Exercise';
 import Write from './pages/Imagination/Write';
 import AISummary from './pages/AISummary/AISummary';
 import WriteImagination from './pages/Imagination/WriteImagination';
+import Result from './pages/Imagination/Result';
 
 const Router = () => {
   return (
@@ -21,6 +22,7 @@ const Router = () => {
           <Route path='/imagination/write' element={<Write />} />
           <Route path='/aisummary' element={<AISummary />} />
           <Route path='/imagination/write' element={<WriteImagination />} />
+          <Route path='/imagination/result' element={<Result />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
