@@ -11,29 +11,34 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/common/footer/Footer';
 import { getWritingList } from '../../apis/writingApi';
 
-interface listType {
+interface Info {
   writingId: number;
   keyword: string;
   complete: boolean;
 }
 
+interface Data {
+  type: string;
+  infoList: Info[];
+}
+
 const Exercise = () => {
-  const [data, setData] = useState<listType[]>();
+  const [data, setData] = useState<Data[]>();
 
   const checkedList = [check1, check2, check3];
   const navigate = useNavigate();
 
-  const fetchWritings = async () => {
-    try {
-      const data = await getWritingList();
-      setData(data);
-    } catch (error) {
-      console.error('Error fetching writings:', error);
-    }
-  };
-
   useEffect(() => {
-    fetchWritings();
+    const fetchWritings = async () => {
+      try {
+        getWritingList().then((res) => setData(res));
+      } catch (error) {
+        console.error('Error fetching writings:', error);
+      }
+    };
+    if (data) {
+      fetchWritings();
+    }
   }, []);
 
   return (
@@ -42,21 +47,20 @@ const Exercise = () => {
         <div className={styles.title}>오늘의 요약 훈련</div>
         <img src={topic1} />
         <div className={styles.exerciseList}>
-          {data &&
-            data.map((item, index) => (
-              <div className={styles.exercise}>
-                {item.complete ? (
-                  <img src={checkedIcon} />
-                ) : (
-                  <img src={checkedList[index]} />
-                )}
-                <div>{item.keyword}</div>
-              </div>
-            ))}
+          {data[0]?.infoList.map((item, index) => (
+            <div className={styles.exercise}>
+              {item.complete ? (
+                <img src={checkedIcon} />
+              ) : (
+                <img src={checkedList[index]} />
+              )}
+              <div>{item.keyword}</div>
+            </div>
+          ))}
         </div>
         <img src={topic2} />
         <div className={styles.exerciseList}>
-          {data?.map((item, index) => (
+          {data[1]?.infoList.map((item, index) => (
             <div className={styles.exercise}>
               {item.complete ? (
                 <img src={checkedIcon} />
@@ -69,7 +73,7 @@ const Exercise = () => {
         </div>
         <img src={topic3} />
         <div className={styles.exerciseList}>
-          {data?.map((item, index) => (
+          {data[2]?.infoList.map((item, index) => (
             <div className={styles.exercise} onClick={() => navigate('/write')}>
               {item.complete ? (
                 <img src={checkedIcon} />
