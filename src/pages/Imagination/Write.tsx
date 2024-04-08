@@ -22,7 +22,9 @@ const Write = () => {
       postSummary(1, state.id, content).then((res) => {
         console.log('gg', res);
         setData(res);
-        navigate('/aisummary', { state: res.result.summary });
+        navigate('/aisummary', {
+          state: { ai: res.result.summary, my: content },
+        });
       });
     } catch (error) {
       console.error('Error fetching writings:', error);
