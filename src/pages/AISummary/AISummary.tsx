@@ -10,7 +10,11 @@ const AISummary = () => {
   console.log('ddd', state);
   return (
     <>
-      <Header />
+      <div className={styles.top}>
+        <div className={styles.numberBox}>2</div>
+        <div className={styles.category}>사회•문화</div>
+        <div className={styles.headerTitle}>경제 성장 모형</div>
+      </div>
       <div className={styles.container}>
         <div className={styles.topSection}>
           <div className={styles.title}>내가 요약한 글</div>
