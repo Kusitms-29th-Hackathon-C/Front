@@ -11,11 +11,11 @@ const HomeSummary = () => {
   const Dummy: DummyType = {
     '인문 ・ 예술': {
       '0': true,
-      '1': false,
-      '2': false,
+      '1': true,
+      '2': true,
     },
     '사회 ・ 문화': {
-      '0': false,
+      '0': true,
       '1': false,
       '2': false,
     },
